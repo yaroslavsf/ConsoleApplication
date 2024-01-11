@@ -1,2 +1,9 @@
-.vs/
-obj/
+Binaries
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+NuGet
+*.nupkg
