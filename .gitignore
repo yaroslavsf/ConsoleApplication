@@ -1,9 +1,12 @@
-Binaries
+# Binaries
 [Dd]ebug/
 [Rr]elease/
 x64/
 [Bb]in/
 [Oo]bj/
 
-NuGet
+# NuGet
 *.nupkg
+
+# Visual Studio
+.vs/
