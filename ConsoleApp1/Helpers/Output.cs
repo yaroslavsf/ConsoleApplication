@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace _01_Console_App.Helpers
 {
-    public class Output
+    public class Output : Interaction
     {
-        public string Text { get; set; }
-        public int Zahl { get; set; }
+        public Output(string message) : base(message)
+        {
+            Zeitpunkt = DateTimeOffset.Now;
+        }
+        public Output(string message, DateTimeOffset time) : base(message)
+        {
+            Zeitpunkt = time;
+        }
+
         public DateTimeOffset Zeitpunkt { get; set; }
     }
+    
 }

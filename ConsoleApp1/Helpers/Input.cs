@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace _01_Console_App.Helpers
 {
-    public enum Operation
+    public class Input : Interaction
     {
-        Low,
-        Medium,
-        High
-    }
-    public class Input
-    {
-        public string Text { get; set; }
-        public int Zahl { get; set; }
-        public Operation Operation { get; set; }
+        public Enum? Operation { get; set; }
+        public int? Zahl { get; set; }
+        public Input(Enum operation)
+        {
+            Operation = operation;
+        }
+        public Input(string str) : base(str) { }
+        public Input(int number) 
+        {
+            Zahl = number; 
+        }        
     }
 }
