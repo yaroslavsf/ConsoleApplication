@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace _01_Console_App.Helpers
 {
     /// <summary>
-    /// Represents the controlling mechanism over input/output stream.
+    /// Represents the validating and logging mechanism over input/output stream.
     /// </summary>
     public class InteractionHandler
     {
+        //logging oprations
         readonly List<Interaction> _interactions;        
         public List<Interaction> Interactions { get => _interactions; }
         public InteractionHandler(List<Interaction> interactions)
@@ -21,12 +22,18 @@ namespace _01_Console_App.Helpers
         {
             _interactions = new();
         }
+        /// <summary>
+        /// Method for output and logging.
+        /// </summary>
         public void Output(string message)
         {
             Console.Write(message);
             //log
             _interactions.Add(new Output(message));
         }
+        /// <summary>
+        /// Method for string input validation and logging.
+        /// </summary>
         public string StringInput()
         {
             string input = Console.ReadLine() ?? "";            
@@ -34,6 +41,15 @@ namespace _01_Console_App.Helpers
             _interactions.Add(new Input(input));
             return input;
         }
+
+        /// <summary>
+        /// Method for number/operation input validation and logging. 
+        /// All exceptions are handled here.
+        /// </summary>
+        /// <param name="enumType">The presense indicates if input 
+        /// is for operation or just number. The value is a type of enum
+        /// with operations to ask.
+        /// </param>
         public int NumberInput(Type? enumType = null)
         {
             bool isValidated = false;

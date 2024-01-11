@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _01_Console_App.Helpers
 {
+    /// <summary>
+    /// Represents the unit of input in one of the initialized fields. 
+    /// </summary>
     public class Input : Interaction
     {
         public Enum? Operation { get; set; }

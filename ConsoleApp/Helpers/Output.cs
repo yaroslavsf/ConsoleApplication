@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _01_Console_App.Helpers
 {
+    /// <summary>
+    /// Represents the unit of output in one of the initialized fields. 
+    /// </summary>
     public class Output : Interaction
     {
         public Output(string message) : base(message)
