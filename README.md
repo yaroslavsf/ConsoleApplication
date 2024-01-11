@@ -4,6 +4,7 @@
 - To scale the app with new menu options: <br>
 > Add your new option in Menu enum <br>
 <img src="./Imgs/menu.png" alt="alt text" width="200"/> <br>
+
 > Create your enum with operations <br>
 <img src="./Imgs/operation.png" alt="alt text" width="200"/>
 
